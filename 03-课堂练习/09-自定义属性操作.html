@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src='jquery-1.12.1.js'></script>
+
+    <script>
+
+
+        // 页面加载
+ $(function(){
+
+     //  each（）方法是jquer 中的封装的一个方法 ， jquery中有隐式迭代的
+     // 想要自己操作每个元素标签 用each（） 方法 并在函数中传入两参数
+     //  操作每个单独的元素就用each方法
+     $('li').each(function(index,ele){
+//         ele 就是每个li标签
+         // 给 每个li 添加自定义属性
+         $(ele).attr('score','10');
+
+     });
+//       点击li  显示每个自定义属性
+     $('li').click(function(){
+        console.log($(this).attr('score'));
+     });
+
+ });
+
+
+    </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+<input type='button' value='按钮' id='btn'/>
+<!--<input type='text' value='' id='txt'/>-->
+<!--<div id='dv'></div>-->
+
+<ul>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+</ul>
+</body>
+</html>

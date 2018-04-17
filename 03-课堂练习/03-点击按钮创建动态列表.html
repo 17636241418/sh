@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #dv{
+            width: 400px;
+            height: 400px;
+            border:1px solid red;
+
+        }
+    </style>
+
+
+    <script src='jquery-1.12.1.js'></script>
+
+    <!--<script>-->
+
+        <!--&lt;!&ndash;var arr = ["家用电器器", "手机 /	运营商 /	数码", "电脑 /	办公", "家居 /	家具 /	家装 /	厨具", "男装 /	女装 /	童装 /	内衣",&ndash;&gt;-->
+<!--//            &lt;!&ndash;"美妆个护 /	宠物", "女鞋 /	箱包 /	钟表 /	珠宝", "男鞋 /	运动 /	户外"];&ndash;&gt;-->
+
+
+        <!--// 页面加载-->
+      <!--$(function(){-->
+          <!--// 点击按钮生成事件-->
+        <!--$('#btn').clcik(function(){-->
+
+             <!--// 设置ul 列表 添加到div  样式-->
+         <!--var ulObj=$('<ul style="list-style-type:none;cursor:pointer"></ul>').appendTo($('#dv'));-->
+            <!--//   循环遍历-->
+            <!--for(var i=0;i<arr.length;i++){-->
+
+             <!--// li 标签 里添加a 标签  添加到ul 中-->
+<!--//            $('<li><a href="javascript:void(0)">'+arr[i]+'</a></li>').appendTo(ulObj).mouseenter(function(){-->
+                <!--//  设置鼠标进入的样式-->
+
+
+                <!--$('<li><a href="javascript:void(0)">' + arr[i] + '</a></li>').appendTo(ulObj).mouseenter(function () {-->
+                    <!-- -->
+                <!--$(this).css('backgrounndColor','red');-->
+
+            <!--}).mouseleave(function(){-->
+
+                <!--$(this).css('backgrounndColor','');-->
+            <!--});-->
+            <!--}-->
+        <!--});-->
+      <!--});-->
+
+<!--//-->
+<!--//        var arrName=['方法','中','参数','样子'];-->
+<!--//        arrName.forEach(function(item,index){-->
+<!--//-->
+<!--//        })-->
+<!--////-->
+
+
+
+
+
+    <!--</script>-->
+    <!-- -->
+    <script>
+
+        var arr = ["家用电器器", "手机 /	运营商 /	数码", "电脑 /	办公", "家居 /	家具 /	家装 /	厨具", "男装 /	女装 /	童装 /	内衣",
+            "美妆个护 /	宠物", "女鞋 /	箱包 /	钟表 /	珠宝", "男鞋 /	运动 /	户外"];
+
+        $(function () {
+            $('#btn').click(function () {
+
+                var ulObj = $('<ul style="list-style:none;cursor:pointer"></ul>').appendTo($('#dv'));
+
+                for (var i = 0; i < arr.length; i++) {
+                    $('<li><a href="javascript:void(0)">' + arr[i] + '</a></li>').appendTo(ulObj).mouseenter(function () {
+                        $(this).css('backgroundColor', 'red');
+                    }).mouseleave(function () {
+                        $(this).css('backgroundColor','');
+                    });
+
+                }
+            });
+        });
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+<input type='button' value='按钮' id='btn'/>
+<div id='dv'></div>
+
+</body>
+</html>

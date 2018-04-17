@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src='jquery-1.12.1.js'></script>
+
+    <script>
+
+        $(function(){
+            $('#btn').click(function(){
+           var aObj=$('<a href="http://www.baidu.com">百度</a>');
+                $('#dv').append(aObj);
+                $('<a href="http://www.baidu.com">百度</a>').appendTo($('#dv'));
+
+
+//        var aObj=$('<a></a>').appendTo($('#dv'));
+//        aObj.href='http://www.baidu.com';
+//        aObj.attr('href','http://baidu.com');
+//        aObj.text('百度');
+
+            });
+        });
+
+
+
+
+
+//          $(function(){
+//              $('#btn').clicK(function(){
+//             var aObj=$('<a href="http://www.baidu.com">百度</a>');
+//                  $('#dv').append(aObj);
+//
+//              });
+//          });
+    </script>
+</head>
+<body>
+<input type='button' value='按钮' id='btn'/>
+<div id='dv'></div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+
+    <script>
+
+        // 页面加载
+     $(function(){
+//          点击 上面的  去·      ·去网上fa按钮
+         $('#j_cbAll').click(function(){
+
+             // 有一个选中  其他所有的选中
+             $('#j_tb input').prop('checked',$('#j_cbAll').prop('checked'));
+
+         });
+  //  点击单个按钮时候
+         $('#j_tb input').click(function(){
+
+////         获取复选框 选中的个数
+             var length1=$('#j_tb input').length;
+
+                // 获取复选框中所有的个数
+             var length2=$('#j_tb input:checked').length;
+                            // 全选的复选框 选中的相同
+
+             $('#j_cbAll').prop('checked',length1===length2);
+
+         });
+     })  ;
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="j_cbAll"/>
+            </th>
+            <th>课程名称</th>
+            <th>所属学院</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>JavaScript</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>css</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>html</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>jQuery</td>
+            <td>前端与移动开发学院</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

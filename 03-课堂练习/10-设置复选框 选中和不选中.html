@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src='jquery-1.12.1.js'></script>
+
+    <script>
+ // 页面加载
+$(function(){
+//    点击按钮// 判断是否选中
+    $('#btn').click(function(){
+      // 如果选中  就应该不选
+      if($('#dd').prop('checked')){
+
+     $('#dd').prop('checked',false);
+      } else{
+
+          $('#dd').prop('checked',true);
+      }
+    });
+});
+
+
+
+
+
+    </script>
+</head>
+<body>
+<input type='button' value='按钮' id="btn"/>
+
+ <input type='checkbox' value='1' name='sex'/> 1
+ <input type='checkbox' value='1' name='sex'/> 2
+ <input type='checkbox' value='1' name='sex' id="dd"/> 3
+ <input type='checkbox' value='1' name='sex'/> 4
+ <input type='checkbox' value='1' name='sex'/> 5
+</body>
+</html>
